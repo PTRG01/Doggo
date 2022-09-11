@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Doggo - show me your dog!</title>
+  </head>
+  <body>
+    <div class="app" id="app">
+      <header class="header">
+        <img class="logo" src=".\img\DoggoLogo.png" alt="Doggo Logo">
+       
+        <form class="search">  
+           <input class="number__field" type="number" name="Photos" id="photos" min="1" max="5" step="1" value="5">
+            <input class="search__field" type="text"  placeholder="Search for dog breeds..."></input> 
+            <button class="form__button btn" type="submit">Search</button> </form>
+        <form class="form" action="" method="get">
+
+            <label class="h4" for="form__label">Breed: </label>
+            <select class="form__select " id="dogs" name="dogs">
+              <option class="form__list__option" value="dog1">dog1</option>
+              <option class="form__list__option" value="dog2">dog2</option>
+              <option class="form__list__option" value="dog3">dog3</option>
+              <option class="form__list__option" value="dog4">dog4</option>
+            </select>
+        
+          
+            <button class="form__button btn" type="submit">Submit!</button>
+        </form>
+        <button class="btn btn__bookmarks">
+          <svg >
+            <use  href="/img/symbol-defs.svg#icon-bookmark"></use>
+          </svg></button>
+      </header>
+      <main class="main">
+          <ul class="search__results">
+          </ul>
+        <div class="gallery">
+
+        </div>
+        <div class="bookmarks hidden">
+        </div>
+      </main>
+    </div>
+
+    <script type="module" defer src="./js/index.js"></script>
+  </body>
+</html>
