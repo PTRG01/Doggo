@@ -7,7 +7,7 @@ class HomepageView extends View {
   _generateMarkup() {
     return /* html */ `
     <header class="header">
-    <img class="logo" src="../img/DoggoLogo.png" alt="Doggo Logo" />
+    <img class="logo" src="./img/DoggoLogo.png" alt="Doggo Logo" />
     <h1 class="heading-title">Hello, Please search for a dog breed</h1>
     <nav class="nav">
       <form class="search">
