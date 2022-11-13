@@ -1,16 +1,18 @@
 .search__results {
-  grid-area: list;
-  width: 30vw;
+  width: 100%;
   list-style: none;
-  background-color: $col-grey-400;
-
-  // @include flex(column);
+  background-color: $col-white;
+  position: absolute;
+  top: 4.2rem;
+  border: 1px solid $col-grey-500;
+  @include flex(column, _, center);
 
   &__item {
-    @include flex(row, _, center);
+    @include flex(row, space-between, center);
     cursor: pointer;
     width: 100%;
-    height: 8rem;
+    height: 3.6rem;
+    padding-left: 1rem;
     transition: all 0.3s;
     &:hover {
       // transform: scale(101%);
@@ -19,8 +21,21 @@
       border-bottom: 1px solid $col-primary;
     }
   }
-
-  &__text {
-    margin-left: 3rem;
+}
+.search {
+  @media only screen and (max-width: 750px) {
+    order: 3;
   }
+}
+.search__field {
+  @include flex(column);
+  max-width: 50rem;
+}
+
+.search__cont {
+  @include flex(column);
+  max-width: 50rem;
+  max-height: 400rem;
+  position: relative;
+  z-index: 100;
 }

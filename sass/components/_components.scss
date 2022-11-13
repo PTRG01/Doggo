@@ -2,3 +2,16 @@
 @import "buttons";
 @import "form";
 @import "search";
+
+.spinner {
+  margin: 5rem auto;
+  grid-column: 1/4;
+  grid-row: 2/4;
+  align-self: center !important;
+  svg {
+    height: 20rem;
+    width: 20rem;
+    fill: $col-primary;
+    animation: rotate 2s infinite linear;
+  }
+}

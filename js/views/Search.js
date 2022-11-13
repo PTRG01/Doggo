@@ -1,26 +1,25 @@
-import * as helpers from "../helpers.js";
+import { breedModel } from "../models/model.js";
+import View from "./View.js";
 
-export function getQuery(parent, element) {
-  const query = parent.querySelector(element).value;
-  if (query.length >= 3) {
-    console.log(query);
+class SearchView extends View {
+  get _parentEl() {
+    return document.querySelector(".search__field");
+  }
+
+  getQuery() {
+    const query = this._parentEl.value;
     return query;
+  }
+
+  addHandlerSearch(handler) {
+    this._parentEl.addEventListener("keyup", function (e) {
+      e.preventDefault();
+      handler();
+    });
+  }
+  _clearInput() {
+    this._parentEl.querySelector(".search__field").value = "";
   }
 }
 
-export function getSearchResult(e) {
-  e.preventDefault();
-  if (
-    e.target.className === "search__results__item" ||
-    "search__results__text"
-  ) {
-    let query = e.target.id;
-    console.log(query);
-    return query;
-  }
-}
-
-export const markupSearch = (data, i) =>
-  /* html */ ` <li id="${data}" class="search__results__item"><p id='${data}' class="search__results__text h4">${
-    data.charAt(0).toUpperCase() + data.slice(1)
-  }</p></li>`;
+export default new SearchView();

@@ -1,21 +1,24 @@
 .gallery {
   display: grid;
   grid-area: gallery;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: auto;
   gap: 1rem;
   width: 100%;
-  align-content: flex-start;
+  min-height: 80vh;
   padding: 3rem;
-
+  align-content: start;
+  @media only screen and (max-width: 675px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
   &--favourites {
     max-width: 300px;
   }
 
   .card {
-    padding: 0.3rem;
+    border: 2px solid $col-grey-600;
     border-radius: 6px;
-    background-color: $col-primary-light;
+    background-color: $col-grey-500;
     position: relative;
     max-height: 30rem;
     overflow: hidden;
@@ -23,60 +26,35 @@
     filter: $drop-shadow-10;
     transition: all 0.3s;
     filter: saturate(30%);
-    opacity: 0.7;
 
     &:hover {
       transform: scale(1.03);
-      background-color: $col-primary;
+      border: 3px solid $col-grey-800;
       filter: saturate(100%);
-      opacity: 1;
     }
 
     &__img {
       width: 100%;
-      height: 100%;
+      height: auto;
       border-radius: 6px;
-      filter: blur(5px);
+      filter: blur(1px);
       overflow: hidden;
       transition: all 0.3s;
+      opacity: 0.7;
     }
     :hover {
       filter: blur(0);
-    }
-    .like {
-      position: absolute;
-      left: 20px;
-      bottom: 20px;
-      padding: 1rem;
-      border-radius: 500px;
-      font-size: 2rem;
-      line-height: 0.6;
-      cursor: pointer;
-      transition: all 0.3s;
-      &:hover {
-        transform: scale(1.2);
-      }
+      opacity: 1;
     }
   }
-}
-.bookmarks {
-  display: grid;
-  grid-area: gallery;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: auto;
-  gap: 1rem;
-  width: 100%;
-  align-content: flex-start;
-  padding: 3rem;
-}
-
-.bookmark {
-  background-color: $col-primary;
-  color: $col-white;
-  border-color: $col-white;
-}
-
-.breed-title {
-  @include flex(row, center, center);
-  color: $col-grey-500;
+  .bookmarks {
+    display: grid;
+    grid-area: gallery;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 1rem;
+    width: 100%;
+    align-content: flex-start;
+    padding: 3rem;
+  }
 }
