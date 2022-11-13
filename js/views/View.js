@@ -26,7 +26,7 @@ export default class View {
     const markup = `
       <div class="spinner">
         <svg>
-          <use href="/img/symbol-defs.svg#icon-spinner3""></use>
+          <use href="./img/symbol-defs.svg#icon-spinner3""></use>
         </svg>
       </div>
     `;
