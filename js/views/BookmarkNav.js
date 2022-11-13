@@ -12,7 +12,7 @@ class BookmarkNavView extends View {
    
   <button class="btn btn__clear">
       <svg>
-        <use href="/img/symbol-defs.svg#icon-cross"></use>
+        <use href="./img/symbol-defs.svg#icon-cross"></use>
       </svg>
       </button>
       </a>
@@ -22,7 +22,7 @@ class BookmarkNavView extends View {
     <a href="#/">
   <button class="btn btn__bookmarks">
       <svg>
-        <use href="/img/symbol-defs.svg#icon-bookmark"></use>
+        <use href="./img/symbol-defs.svg#icon-bookmark"></use>
       </svg>
       </button>
       </a>

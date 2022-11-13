@@ -34,7 +34,7 @@ class HomepageView extends View {
         <a href="#/bookmarks">
           <button class="btn btn__bookmarks">
             <svg>
-              <use href="/img/symbol-defs.svg#icon-bookmark"></use>
+              <use href="./img/symbol-defs.svg#icon-bookmark"></use>
             </svg>
           </button>
         </a>   
